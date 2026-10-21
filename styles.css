@@ -226,7 +226,7 @@ main {
   align-items: flex-start;
   gap: 2.2rem;
   margin-top: 1.5rem;
-  margin-bottom: 0.9rem !important;
+  margin-bottom: 1.6rem !important;
 }
 
 .hero-text {
@@ -358,7 +358,7 @@ main {
 }
 
 .ticker {
-  margin-top: 0.75rem !important;
+  margin-top: 1.15rem !important;
   padding: 1rem 0 0.55rem;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
@@ -949,7 +949,7 @@ main {
   }
 
   .ticker {
-    margin-top: 0 !important;
+    margin-top: 0.7rem !important;
     padding: 0.7rem 0 0.4rem;
   }
 
@@ -984,7 +984,7 @@ main {
   }
 
   .ticker {
-    margin-top: 0.55rem !important;
+    margin-top: 0.7rem !important;
   }
 }
 
@@ -993,7 +993,11 @@ main {
     margin-bottom: 0;
   }
 
+  .hero-grid {
+    margin-bottom: 1.8rem !important;
+  }
+
   .ticker {
-    margin-top: 0.9rem !important;
+    margin-top: 1.4rem !important;
   }
 }
