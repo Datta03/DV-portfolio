@@ -40,6 +40,105 @@
     margin-top: 0;
     margin-bottom: 1.2rem;
   }
+
+  .contact-section .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .contact-card {
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1.4rem 1.5rem 1.2rem;
+  }
+
+  .contact-card .icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    background: rgba(49, 193, 242, 0.14);
+    color: var(--cyan);
+    font-size: 1.55rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1;
+  }
+
+  .contact-card small {
+    color: var(--muted);
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-size: 0.72rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .contact-card strong {
+    font-size: clamp(1.15rem, 2vw, 1.7rem);
+    line-height: 1.25;
+    display: block;
+  }
+
+  .contact-value-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-top: auto;
+  }
+
+  .copy-mail,
+  .visit-link {
+    border: 1px solid rgba(49, 193, 242, 0.35);
+    background: rgba(49, 193, 242, 0.08);
+    color: var(--cyan);
+    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    padding: 0;
+  }
+
+  .copy-mail:hover,
+  .visit-link:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 22px rgba(49, 193, 242, 0.14);
+  }
+
+  .copy-mail svg,
+  .visit-link svg {
+    width: 18px;
+    height: 18px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .copy-mail.copied {
+    background: rgba(81, 255, 183, 0.12);
+    color: #8ef7d0;
+  }
+
+  .mail-card .contact-value-row {
+    margin-top: 0.8rem;
+  }
+
+  @media (max-width: 900px) {
+    .contact-section .contact-grid {
+      grid-template-columns: 1fr;
+    }
+  }
 </style>
 </head>
 <body>
@@ -80,7 +179,7 @@
 <article class="card role"><div class="role-head"><div><h3>Senior Software Test Engineer</h3><p>Test Yantra Software Solutions Pvt. Ltd. <span>· IVY Mobility Solutions</span></p></div><time>Jul 2023 – Aug 2024</time></div><div class="tags"><span class="blue">QA</span><span>FMCG</span><span>Business Apps</span></div></article>
 <article class="card role"><div class="role-head"><div><h3>Software Test Engineer</h3><p>ArSquare Development Pvt. Ltd.</p></div><time>Jan 2021 – Jun 2023</time></div><div class="tags"><span class="blue">QA</span><span>Web</span><span>Mobile</span></div></article>
 </div></section>
-<section class="section wrap" id="projects"><p class="kicker">04 �� FEATURED PROJECTS</p><h2>Work I’ve shipped, tested and signed off.</h2><p class="intro">These are professional client engagements spanning QA strategy, release validation and data quality assurance.</p><div class="project-grid">
+<section class="section wrap" id="projects"><p class="kicker">04 — FEATURED PROJECTS</p><h2>Work I’ve shipped, tested and signed off.</h2><p class="intro">These are professional client engagements spanning QA strategy, release validation and data quality assurance.</p><div class="project-grid">
 <article class="card project"><div class="project-meta"><span class="blue">E-COMMERCE</span><span>Web · Android · iOS</span></div><h3>AJIO</h3><p>E-commerce quality across the shopping journey.</p></article>
 <article class="card project"><div class="project-meta"><span class="blue">BANKING</span><span>Android · iOS</span></div><h3>HDFC PayZapp</h3><p>Banking-grade quality for a credit card platform.</p></article>
 <article class="card project"><div class="project-meta"><span class="blue">AI / CONSUMER</span><span>Mobile Application</span></div><h3>Taro99</h3><p>Testing AI-generated experiences with a QA lens.</p></article>
@@ -93,11 +192,15 @@
 </div><article class="card learning"><p class="kicker">ON LEARNING</p><p>My interest in AI-enabled software quality and business analysis is a learning path built through professional certificates and practical application.</p></article>
 <section class="section wrap contact-section" id="contact"><p class="kicker">06 — CONTACT</p><h2>Let’s ship software<br>that holds up<span>.</span></h2><p class="contact-intro">Looking for a QA Engineer who can test with precision, communicate clearly and protect the release?</p>
 <div class="contact-grid">
-  <article class="card contact-card">
+  <article class="card contact-card mail-card">
     <b class="icon">✉</b>
     <small>EMAIL</small>
-    <strong>dattasvaidya@gmail.com</strong>
-    <a class="contact-button primary" href="mailto:dattasvaidya@gmail.com">SEND EMAIL</a>
+    <div class="contact-value-row">
+      <strong>dattasvaidya@gmail.com</strong>
+      <button class="copy-mail" type="button" aria-label="Copy email" title="Copy email">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 9.5A2.5 2.5 0 0 1 11.5 7h7A2.5 2.5 0 0 1 21 9.5v7A2.5 2.5 0 0 1 18.5 19h-7A2.5 2.5 0 0 1 9 16.5z"></path><path d="M15 14.5H6.5A2.5 2.5 0 0 1 4 12V5.5A2.5 2.5 0 0 1 6.5 3H14a2.5 2.5 0 0 1 2.5 2.5V14"></path></svg>
+      </button>
+    </div>
   </article>
   <article class="card contact-card">
     <b class="icon">☎</b>
@@ -107,11 +210,38 @@
   <article class="card contact-card">
     <b class="icon">in</b>
     <small>LINKEDIN</small>
-    <strong><a href="https://www.linkedin.com/in/dattatreya-vaidya/" target="_blank" rel="noreferrer">Dattatreya Vaidya</a></strong>
+    <div class="contact-value-row">
+      <strong><a href="https://www.linkedin.com/in/dattatreya-vaidya/" target="_blank" rel="noreferrer">Dattatreya Vaidya</a></strong>
+      <a class="visit-link" href="https://www.linkedin.com/in/dattatreya-vaidya/" target="_blank" rel="noreferrer" aria-label="Visit LinkedIn">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
+      </a>
+    </div>
   </article>
 </div>
 </section>
 </main>
 <footer class="footer"><span class="logo mini">DV<span>.</span></span><span>© 2026 Dattatreya Vaidya. Content aligned to my resume.</span><a href="#home">Back to top ↑</a></footer>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const copyButton = document.querySelector('.copy-mail');
+    if (!copyButton) return;
+
+    copyButton.addEventListener('click', async function () {
+      const email = 'dattasvaidya@gmail.com';
+      try {
+        await navigator.clipboard.writeText(email);
+        const original = copyButton.title;
+        copyButton.classList.add('copied');
+        copyButton.title = 'Copied';
+        setTimeout(function () {
+          copyButton.classList.remove('copied');
+          copyButton.title = original;
+        }, 1200);
+      } catch (err) {
+        window.location.href = 'mailto:' + email;
+      }
+    });
+  });
+</script>
 <script src="script.js"></script>
 </body></html>
