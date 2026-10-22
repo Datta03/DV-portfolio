@@ -212,6 +212,7 @@ main { display: block; }
 }
 
 .hero-text h1 {
+  position: relative;
   display: block;
   margin: 0 0 0.35em;
   font-size: clamp(2.8rem, 4.7vw, 7rem);
@@ -220,6 +221,23 @@ main { display: block; }
   font-weight: 600;
   font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", "Georgia", serif;
   color: var(--text);
+}
+
+.hero-text h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.16em;
+  width: 64%;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(145, 233, 255, 0.2), rgba(145, 233, 255, 1), rgba(145, 233, 255, 0.2));
+  box-shadow: 0 0 10px rgba(145, 233, 255, 0.3);
+  animation: nameUnderline 2.8s ease-in-out infinite alternate;
+}
+
+@keyframes nameUnderline {
+  0% { transform: translateX(0); opacity: 0.8; }
+  100% { transform: translateX(12%); opacity: 1; }
 }
 
 .hero-text h1 .name-line {
