@@ -32,6 +32,30 @@
     align-self: flex-start;
   }
 
+  .name-stack {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 0.2em;
+  }
+
+  .name-stack::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0.03em;
+    width: 64%;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(145, 233, 255, 0.2), rgba(145, 233, 255, 1), rgba(145, 233, 255, 0.2));
+    box-shadow: 0 0 10px rgba(145, 233, 255, 0.3);
+    animation: nameUnderline 2.8s ease-in-out infinite alternate;
+  }
+
+  @keyframes nameUnderline {
+    0% { transform: translateX(0); opacity: 0.8; }
+    100% { transform: translateX(12%); opacity: 1; }
+  }
+
   .hero-text h1 {
     font-size: clamp(4.1rem, 7vw, 9.2rem);
     line-height: 0.74;
@@ -47,7 +71,7 @@
 
   .hero-label {
     margin-top: 0;
-    margin-bottom: 0.7rem;
+    margin-bottom: 0.45rem;
   }
 
   .summary {
@@ -223,8 +247,10 @@
 <section class="hero wrap">
 <div class="availability"><i></i> OPEN TO SENIOR QA OPPORTUNITIES</div>
 <div class="hero-grid"><div class="hero-text">
+<div class="name-stack">
 <h1 aria-label="Dattatreya Vaidya"><span class="name-line first">Dattatreya</span><span class="name-line second">Vaidya</span><span class="name-line dot">.</span></h1>
 <p class="mono hero-label">SENIOR TEST ENGINEER · MANUAL · API · MOBILE · BACKEND<br>DATA VALIDATION</p>
+</div>
 <p class="summary">QA Engineer with 5+ years of experience in Manual, API, Mobile Application and Backend Data Validation — shipping reliable software across Banking, E-commerce, FMCG and Education.</p>
 <div class="actions"><a class="btn primary" href="#projects">View My Projects ↓</a><a class="btn" href="Dattatreya_Vaidya-Resume.docx" download>⇩ &nbsp;Download Resume</a><a class="contact-link" href="#contact">Contact Me</a></div>
 </div><div class="portrait"><img src="1000121173.webp" alt="Portrait of Dattatreya Vaidya"><div class="portrait-caption"><span><b>DATTATREYA VAIDYA</b><small>QA · BANKING / E-COMMERCE / FMCG</small></span></div></div></div>
