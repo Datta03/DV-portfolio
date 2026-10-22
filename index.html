@@ -1,16 +1,166 @@
-  .hero-text h1 {
-    font-size: clamp(4.1rem, 7vw, 9.2rem);
-    line-height: 0.74;
-    letter-spacing: -0.08em;
-    margin: 0;
-    font-family: "Cormorant Garamond", "Iowan Old Style", "Book Antiqua", "Georgia", serif;
-    font-weight: 600;
-    display: flex;
-    flex-direction: column;
-    gap: 0.12em;
-  }
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050b16">
+  <meta name="description" content="Dattatreya Vaidya — Senior Test Engineer specialising in manual, API, mobile and backend data validation.">
+  <title>Dattatreya Vaidya | Senior Test Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="progress" id="progress"></div>
 
-  .hero-text h1 .second {
-    margin-left: 30%;
-    margin-top: 0;
-  }
+  <header class="header">
+    <a class="brand" href="#home"><span class="logo">DV<span>.</span></span><span><b>Dattatreya Vaidya</b><small>SENIOR TEST ENGINEER</small></span></a>
+    <button class="menu" id="menu" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav id="nav">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="resume-top" href="Dattatreya_Vaidya-Resume.docx" download>⇩ &nbsp;Resume</a>
+  </header>
+
+  <main id="home">
+    <section class="hero wrap">
+      <div class="availability"><i></i> OPEN TO SENIOR QA OPPORTUNITIES</div>
+
+      <div class="hero-grid">
+        <div class="hero-text">
+          <h1 aria-label="Dattatreya Vaidya">
+            <span class="name-line first">Dattatreya</span>
+            <span class="name-line second">Vaidya</span>
+            <span class="name-line dot">.</span>
+          </h1>
+
+          <p class="mono hero-label">SENIOR TEST ENGINEER · MANUAL · API · MOBILE · BACKEND<br>DATA VALIDATION</p>
+          <p class="summary">QA Engineer with 5+ years of experience in Manual, API, Mobile Application and Backend Data Validation — shipping reliable software across Banking, E-commerce, FMCG and Education.</p>
+
+          <div class="actions">
+            <a class="btn primary" href="#projects">View My Projects ↓</a>
+            <a class="btn" href="Dattatreya_Vaidya-Resume.docx" download>⇩ &nbsp;Download Resume</a>
+            <a class="contact-link" href="#contact">Contact Me</a>
+          </div>
+        </div>
+
+        <div class="portrait">
+          <img src="1000121173.webp" alt="Portrait of Dattatreya Vaidya">
+          <div class="portrait-caption">
+            <span><b>DATTATREYA VAIDYA</b><small>QA · BANKING / E-COMMERCE / FMCG</small></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ticker">
+        <div class="ticker-track">
+          <span>STLC</span><i>•</i><span>KAFKA</span><i>•</i><span>FIGMA</span><i>•</i><span>CONFLUENCE</span><i>•</i><span>POSTMAN</span><i>•</i><span>SQL</span><i>•</i><span>JIRA</span><i>•</i><span>ANDROID</span><i>•</i><span>iOS</span>
+          <span>STLC</span><i>•</i><span>KAFKA</span><i>•</i><span>FIGMA</span><i>•</i><span>CONFLUENCE</span><i>•</i><span>POSTMAN</span><i>•</i><span>SQL</span><i>•</i><span>JIRA</span><i>•</i><span>ANDROID</span><i>•</i><span>iOS</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="about">
+      <p class="kicker">01 — ABOUT</p>
+      <h2>Quality, practised from the PRD to production.</h2>
+      <div class="about-grid">
+        <div>
+          <p class="lead">I’m a QA Engineer with 5+ years of experience testing web, mobile and backend systems across Banking, E-commerce, FMCG and Education.</p>
+        </div>
+        <div class="stats">
+          <article><b>5+</b><span>Years in QA</span></article>
+          <article><b>12+</b><span>Projects and releases</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="skills">
+      <p class="kicker">02 — SKILLS</p>
+      <h2>A testing stack built for real releases.</h2>
+      <div class="skill-grid">
+        <article class="card skill"><em>01</em><h3>Manual Testing</h3><p>Full STLC ownership from test design to defect closure.</p><div class="tags"><span>Functional</span><span>Regression</span></div></article>
+        <article class="card skill"><em>02</em><h3>API Testing</h3><p>REST validation and backend data verification.</p><div class="tags"><span>Postman</span><span>JSON</span></div></article>
+        <article class="card skill"><em>03</em><h3>Database Testing</h3><p>SQL checks for data consistency and defect isolation.</p><div class="tags"><span>SQL</span><span>Oracle</span></div></article>
+      </div>
+    </section>
+
+    <section class="section wrap" id="experience">
+      <p class="kicker">03 — EXPERIENCE</p>
+      <h2>Five roles. Every release treated like it matters.</h2>
+      <div class="timeline">
+        <article class="card role">
+          <div class="role-head">
+            <div>
+              <h3>Senior Test Engineer</h3>
+              <p>NeoSOFT Pvt. Ltd. <span>· Fynd</span></p>
+            </div>
+            <time>Mar 2026 – Present <b>CURRENT</b></time>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section wrap" id="projects">
+      <p class="kicker">04 — FEATURED PROJECTS</p>
+      <h2>Work I’ve shipped, tested and signed off.</h2>
+      <div class="project-grid">
+        <article class="card project"><div class="project-meta"><span class="blue">E-COMMERCE</span><span>Web · Android · iOS</span></div><h3>AJIO</h3><p>E-commerce quality across the shopping journey.</p></article>
+        <article class="card project"><div class="project-meta"><span class="blue">BANKING</span><span>Android · iOS</span></div><h3>HDFC PayZapp</h3><p>Banking-grade quality for a credit card platform.</p></article>
+      </div>
+    </section>
+
+    <section class="section wrap" id="certifications">
+      <p class="kicker">05 — CERTIFICATIONS &amp; LEARNING</p>
+      <h2>Verified credentials, honestly presented.</h2>
+      <div class="cert-grid">
+        <article class="card cert"><span class="status">✓ COMPLETED</span><em>01</em><h3>Google AI Professional Certificate</h3><p>Google · Coursera</p></article>
+        <article class="card cert"><span class="status">✓ COMPLETED</span><em>02</em><h3>IBM Business Analyst Professional Certificate</h3><p>IBM · Coursera</p></article>
+      </div>
+    </section>
+
+    <section class="section wrap contact-section" id="contact">
+      <p class="kicker">06 — CONTACT</p>
+      <h2>Looking for a QA Engineer who can test with precision.</h2>
+      <div class="contact-grid">
+        <article class="card contact-card mail-card">
+          <b class="icon">✉</b>
+          <small>EMAIL</small>
+          <div class="contact-value-row">
+            <strong>dattasvaidya@gmail.com</strong>
+            <button class="copy-mail" type="button" aria-label="Copy email" title="Copy email">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 9.5A2.5 2.5 0 0 1 11.5 7h7A2.5 2.5 0 0 1 21 9.5v7A2.5 2.5 0 0 1 18.5 19h-7A2.5 2.5 0 0 1 9 16.5z"></path><path d="M15 14.5H6.5A2.5 2.5 0 0 1 4 12V6.5A2.5 2.5 0 0 1 6.5 4H13.5A2.5 2.5 0 0 1 16 6.5V10"></path></svg>
+            </button>
+          </div>
+        </article>
+
+        <article class="card contact-card mobile-card">
+          <b class="icon">☎</b>
+          <small>MOBILE</small>
+          <strong><a href="tel:+918904693835">8904693835</a></strong>
+        </article>
+
+        <article class="card contact-card linkedin-card">
+          <b class="icon">in</b>
+          <small>LINKEDIN</small>
+          <div class="contact-value-row">
+            <strong><a href="https://www.linkedin.com/in/dattatreya-vaidya/" target="_blank" rel="noreferrer">Dattatreya Vaidya</a></strong>
+            <a class="visit-link" href="https://www.linkedin.com/in/dattatreya-vaidya/" target="_blank" rel="noreferrer" aria-label="Visit LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7"></path><path d="M8 7h9v9"></path></svg>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><span class="logo mini">DV<span>.</span></span><span>© 2026 Dattatreya Vaidya. Content aligned to my resume.</span><a href="#home">Back to top ↑</a></footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
