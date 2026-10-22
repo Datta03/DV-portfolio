@@ -24,4 +24,35 @@ revealItems.forEach(item=>{
   revealObserver.observe(item);
 });
 
-document.getElementById("copy").addEventListener("click",async()=>{try{await navigator.clipboard.writeText("dattasvaidya@gmail.com");document.getElementById("copy").textContent="✓";setTimeout(()=>document.getElementById("copy").textContent="▢",1500)}catch{location.href="mailto:dattasvaidya@gmail.com"}});
+
+document.querySelectorAll(".copy-mail").forEach((copyButton) => {
+  copyButton.addEventListener("click", async (event) => {
+    event.preventDefault();
+
+    const email = "dattasvaidya@gmail.com";
+
+    try {
+      await navigator.clipboard.writeText(email);
+
+      copyButton.innerHTML = "✓";
+      copyButton.setAttribute("aria-label", "Email copied");
+      copyButton.title = "Copied!";
+      copyButton.classList.add("copied");
+
+      setTimeout(() => {
+        copyButton.innerHTML = `
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M9 9.5A2.5 2.5 0 0 1 11.5 7h7A2.5 2.5 0 0 1 21 9.5v7A2.5 2.5 0 0 1 18.5 19h-7A2.5 2.5 0 0 1 9 16.5z"></path>
+            <path d="M15 14.5H6.5A2.5 2.5 0 0 1 4 12V6.5A2.5 2.5 0 0 1 6.5 4H13.5A2.5 2.5 0 0 1 16 6.5V10"></path>
+          </svg>`;
+        copyButton.setAttribute("aria-label", "Copy email");
+        copyButton.title = "Copy email";
+        copyButton.classList.remove("copied");
+      }, 2000);
+
+    } catch (error) {
+      console.error("Clipboard copy failed:", error);
+      alert("Could not copy automatically. Please copy this email manually: " + email);
+    }
+  });
+});
